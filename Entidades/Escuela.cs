@@ -20,7 +20,7 @@ namespace CorEscuela.Entidades
         public Escuela(string nombre, int añoDeCreación) => (Nombre, AñoDeCreación) = (nombre,añoDeCreación);
 
         public Escuela(string nombre, int añoDeCreación, TiposEscuela tipo, string pais = "", string ciudad = ""){
-            (Nombre, AñoDeCreación) = (nombre, añoDeCreación);
+            (Nombre, AñoDeCreación) = (nombre, añoDeCreación); \\manera de pasar los parámetros por tuplas
             pais = Pais;
             Ciudad = ciudad;
         }
