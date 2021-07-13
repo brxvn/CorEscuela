@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace CorEscuela.Entidades
 {
     public class Escuela
@@ -7,7 +9,7 @@ namespace CorEscuela.Entidades
         public string Ciudad { get; set; }
         public string Pais { get; set; }
         public TiposEscuela TipoEscuela { get; set; }
-        public Cursos[] Cursos { get; set; }
+        public  List<Cursos> Cursos { get; set; }
 
         //Hay dos maneras de escribir un constructor
 
