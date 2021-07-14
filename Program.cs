@@ -21,7 +21,17 @@ namespace CorEscuela
 
             foreach (var curso in escuela.Cursos)
             {
-                WriteLine($"Nombre: {curso.Nombre}, ID: {curso.UniqueID}");
+
+                foreach (var alumno in curso.Alumnos)
+                {
+
+                    foreach (var evaluacion in alumno.Evaluaciones)
+                    {
+                        WriteLine($"{curso.Nombre} {alumno.Nombre} {evaluacion.Nombre} {evaluacion.Nota}");
+                    }
+
+                }
+
             }
         }
     }
