@@ -5,7 +5,7 @@ using CorEscuela.Entidades;
 
 namespace CorEscuela
 {
-    public class EscuelaEngine
+    public sealed class EscuelaEngine
     {
         public Escuela Escuela { get; set; }
 
@@ -33,7 +33,7 @@ namespace CorEscuela
                         var rnd = new Random(System.Environment.TickCount);
                         for (int i = 0; i < 5; i++)
                         {
-                            var ev = new Evaluaciones
+                            var ev = new Evaluación
                             {
                                 Asignatura = asignatura,
                                 Nombre = $"{asignatura.Nombre} Eval{i + 1}",
