@@ -13,6 +13,7 @@ namespace CorEscuela
             var engine = new EscuelaEngine();
             engine.Inicializar();
             imprimirCursos(engine.Escuela);
+            var listaObejtos = engine.GetObjetoEscuelas();
         }
 
         private static void imprimirCursos(Escuela escuela)
@@ -29,9 +30,7 @@ namespace CorEscuela
                     {
                         WriteLine($"{curso.Nombre} {alumno.Nombre} {evaluacion.Nombre} {evaluacion.Nota}");
                     }
-
                 }
-
             }
         }
     }

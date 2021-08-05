@@ -93,6 +93,23 @@ namespace CorEscuela
                 curso.Alumnos = GeneralAlumnosRandomly(cantRandom);
             }
         }
-    }
+        public List<ObjetoEscuelaBase> GetObjetoEscuelas()
+        {
+            var lstObj = new List<ObjetoEscuelaBase>();
+            lstObj.Add(Escuela);
+            lstObj.AddRange(Escuela.Cursos);
+            foreach (var curso in Escuela.Cursos)
+            {
+                lstObj.AddRange(curso.Asignaturas);
+                lstObj.AddRange(curso.Alumnos);
+                foreach (var alumno in curso.Alumnos)
+                {
+                    lstObj.AddRange(alumno.Evaluaciones);   
+                }
+            }
 
+            return lstObj;
+        }
+
+    }
 }
